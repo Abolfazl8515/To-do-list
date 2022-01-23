@@ -63,7 +63,6 @@ main .tasks {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 20px 20px;
   margin: 20px 0;
 }
 
@@ -109,4 +108,28 @@ main .tasks .task .edit .edit-Icon {
 main .tasks .task .edit .complete-Task {
   color: rgb(77, 224, 109);
   cursor: pointer;
+}
+
+@media (max-width: 561px) {
+  main .input-Task input {
+    width: 10rem;
+  }
+
+  main .input-Task .add-Tasks {
+    font-size: 1.5rem;
+  }
+
+  main .input-Task select {
+    width: 6rem;
+  }
+
+  main .tasks {
+    width: 27rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 20px 0;
+  }
 }
