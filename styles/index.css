@@ -110,6 +110,14 @@ main .tasks .task .edit .complete-Task {
   cursor: pointer;
 }
 
+main .tasks .task .newTitle {
+  width: 50%;
+  height: 80%;
+  border: 2px solid #5581e7;
+  font-size: 1.5rem;
+  outline: none;
+}
+
 @media (max-width: 561px) {
   main .input-Task input {
     width: 10rem;
@@ -132,4 +140,8 @@ main .tasks .task .edit .complete-Task {
     flex-direction: column;
     margin: 20px 0;
   }
+}
+
+.hidden {
+  display: none;
 }
