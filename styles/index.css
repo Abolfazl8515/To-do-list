@@ -110,6 +110,16 @@ main .tasks .task .edit .complete-Task {
   cursor: pointer;
 }
 
+main .tasks .Completed {
+  width: 90%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background-color: #22c55e;
+}
+
 main .tasks .task .newTitle {
   width: 50%;
   height: 80%;

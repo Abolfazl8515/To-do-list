@@ -26,10 +26,16 @@ const editTaskHandler = (id) => {
   const editingTask = document.getElementById(`${id}`);
   editingTask.innerHTML += `<input type="text" class="newTitle" onkeypress="addNewTitleTaskHandler(event,${id})">`;
   const icons = editingTask.firstElementChild.nextElementSibling.children;
-  console.log(icons);
   for (const icon of icons) {
     icon.classList.add("hidden");
   }
+};
+
+const compleateTaskHandler = (id) => {
+  const compleatingTask = document.getElementById(`${id}`);
+  compleatingTask.className = "Completed";
+  compleatingTask.firstElementChild.innerHTML = `<del>${compleatingTask.firstElementChild.innerHTML}</del>`;
+  compleatingTask.lastElementChild.remove();
 };
 
 function addTaskHandler() {
@@ -43,7 +49,7 @@ function addTaskHandler() {
                   <div class="edit">
                       <i class="bi bi-trash delete" onclick="removeTaskHandler(${idTask})"></i>
                       <i class="bi bi-pencil edit-Icon" onclick="editTaskHandler(${idTask})"></i>
-                      <i class="bi bi-clipboard-check complete-Task"></i>
+                      <i class="bi bi-clipboard-check complete-Task" onclick="compleateTaskHandler(${idTask})"></i>
                   </div>
               </div> 
           `;
