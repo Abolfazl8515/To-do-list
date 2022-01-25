@@ -118,6 +118,7 @@ main .tasks .Completed {
   justify-content: center;
   border-radius: 7px;
   background-color: #22c55e;
+  margin: 10px 0;
 }
 
 main .tasks .task .newTitle {
