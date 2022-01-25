@@ -38,6 +38,33 @@ const compleateTaskHandler = (id) => {
   compleatingTask.lastElementChild.remove();
 };
 
+const filteringTasks = () => {
+  const tasks = document.querySelectorAll(".task");
+  if (filterTasks.value == 0) {
+    const tasksEl = document.querySelector(".tasks");
+    for (const task of tasksEl.children) {
+      task.style = "";
+    }
+  } else if (filterTasks.value == 1) {
+    for (const task of tasks) {
+      if (task.className == "task") {
+        task.style.display = "none";
+      } else {
+        return;
+      }
+    }
+  } else if (filterTasks.value == 2) {
+    const tasksEl = document.querySelector(".tasks");
+    for (const task of tasksEl.children) {
+      if (task.className == "task") {
+        task.style = "";
+      } else {
+        task.style.display = "none";
+      }
+    }
+  }
+};
+
 function addTaskHandler() {
   if (inputTask.value.trim() != "") {
     const tasks = document.querySelector(".tasks");
@@ -66,3 +93,4 @@ inputTask.addEventListener("keypress", (e) => {
   }
 });
 addTask.addEventListener("click", addTaskHandler);
+filterTasks.addEventListener("change", filteringTasks);
