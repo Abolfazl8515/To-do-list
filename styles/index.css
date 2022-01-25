@@ -143,7 +143,7 @@ main .tasks .task .newTitle {
   }
 
   main .tasks {
-    width: 27rem;
+    width: 22rem;
     height: auto;
     display: flex;
     align-items: center;
